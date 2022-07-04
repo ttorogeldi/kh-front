@@ -1,0 +1,11 @@
+.dark--overlay{
+  background-image: linear-gradient(180deg, hsla(0, 0%, 100%, 0) 63%, rgba(0, 0, 0, 0.51) 89%),
+  linear-gradient(180deg, rgba(0, 0, 0, 0.71), hsla(0, 0%, 100%, 0) 37%);
+}
+.dark--overlay-header{
+  background-image: linear-gradient(180deg, hsl(158, 38%, 21%) 48%, rgba(17, 17, 17, 0.51) 98%),
+  linear-gradient(180deg, rgba(47, 41, 41, 0.71), hsl(158, 37%, 27%) 7%);
+}
+.dark-back-custom {
+  background-image: linear-gradient(180deg, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5));
+}
