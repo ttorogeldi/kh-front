@@ -1,11 +1,20 @@
-.dark--overlay{
-  background-image: linear-gradient(180deg, hsla(0, 0%, 100%, 0) 63%, rgba(0, 0, 0, 0.51) 89%),
-  linear-gradient(180deg, rgba(0, 0, 0, 0.71), hsla(0, 0%, 100%, 0) 37%);
+.dark--overlay {
+  background-image: linear-gradient(180deg, hsla(0, 0%, 100%, 0) 63%, rgba(19, 19, 19, 0.51) 89%),
+  linear-gradient(180deg, rgba(24, 24, 24, 0.71), hsla(0, 0%, 100%, 0) 37%);
 }
-.dark--overlay-header{
-  background-image: linear-gradient(180deg, hsl(158, 38%, 21%) 48%, rgba(17, 17, 17, 0.51) 98%),
+
+.dark--overlay-stories {
+  background-image: linear-gradient(180deg, hsla(0, 0%, 100%, 0) 33%, rgba(19, 19, 19, 0.51) 86%),
+  linear-gradient(180deg, rgba(24, 24, 24, 0.71), hsla(0, 0%, 100%, 0) 57%);
+}
+
+.dark--overlay-header {
+  background-image: linear-gradient(180deg, hsl(158, 38%, 21%) 68%, rgba(7, 7, 7, 0.51) 100%),
   linear-gradient(180deg, rgba(47, 41, 41, 0.71), hsl(158, 37%, 27%) 7%);
 }
+
 .dark-back-custom {
   background-image: linear-gradient(180deg, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5));
 }
+
+

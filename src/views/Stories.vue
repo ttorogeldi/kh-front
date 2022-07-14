@@ -1,87 +1,45 @@
 <template>
   <div>
-    <v-img
-        :src="require('../assets/images/back.jpg')"
-        height="600"
-        alt="center"
-    >
-      <v-card height="600" color="transparent" class="dark-back-custom">
-        <div class="white--text text-h2 mx-auto font-weight-medium" style="width: 800px;padding-top: 150px">We believe that the honey we
-          produce can last for as long as over 100 years
-        </div>
-      </v-card>
-    </v-img>
-    <div class="dark--overlay">
+    <vueper-slides fixed-height="100vh" :dragging-distance="50" :parallax="1" :parallax-fixed-content="false">
+      <vueper-slide
+          v-for="(slide, i) in info"
+          :key="i"
+          :image="'http://ttorogf2.beget.tech/uploads/'+slide.thumbnail"
+          :title="slide.title"
+          :content="slide.description"
+          class="white--text text-h6"
+          :link="'/story'"
+      >
+        <template #content>
+          <v-card color="transparent" height="150vh" class="dark--overlay-stories">
+            <v-container class="white--text">
+              <v-row>
+                <v-col>
+                  <h1 class="align-center" style="padding-top: 80vh;">{{ slide.title }}</h1>
 
-      <v-container>
-        <v-row class="my-12">
-          <carousel-3d
-              v-if="info!==null"
-              style="width: 1200px"
-              class="mx-auto"
-              :disable3d="true"
-              :display="7"
-              :space="1270"
-              :width="950"
-              :border="0"
-              :height="400"
-              :clickable="false"
-              :autoplay="true"
-          >
-            <slide style="background: transparent" v-for="(item,index) in info"  :index="index" :key="item.id">
-                <v-card
-                    elevation="0"
-                    color="transparent"
-                    style="overflow: hidden; text-overflow: ellipsis"
-                    height="400"
-                >
-                  <v-img
-                      class="white--text align-end"
-                      height="300px"
-                      :src="'http://ttorogf2.beget.tech/uploads/'+item.thumbnail"
-                  >
-                  </v-img>
-
-                  <v-card-title
-                      style="color: rgb(255,255,255) !important; overflow: hidden; text-overflow: ellipsis; height: 45px"
-                  >{{ item.title }}
-                  </v-card-title>
-                  <div
-                      style="color: rgb(239,239,239) !important;"
-                      class="text-left pa-2 mb-2">{{ item.description }}
-                  </div>
-                </v-card>
-
-
-            </slide>
-          </carousel-3d>
-        </v-row>
-        <v-row>
-          <v-row class="my-15"></v-row>
-        </v-row>
-      </v-container>
-    </div>
-    <div style="background: #214a3b!important;">
-      <v-container>
-        <v-row class="my-12"></v-row>
-        <v-row>
-
-          <v-row class="my-15"></v-row>
-        </v-row>
-      </v-container>
-    </div>
+                </v-col>
+              </v-row>
+              <v-row>
+                <v-col>
+                  <div class="mx-15 mt-15 stories">{{ slide.description }}</div>
+                </v-col>
+              </v-row>
+            </v-container>
+          </v-card>
+        </template>
+      </vueper-slide>
+    </vueper-slides>
   </div>
 </template>
 
 <script>
 import axios from "axios";
-import { Carousel3d, Slide } from 'vue-carousel-3d';
+import {VueperSlide, VueperSlides} from "vueperslides";
 
 export default {
   name: "StoriesView",
-  components:{
-    Carousel3d,
-    Slide
+  components: {
+    VueperSlide, VueperSlides
   },
   data() {
     return {
@@ -100,5 +58,16 @@ export default {
 </script>
 
 <style scoped>
-
+.stories {
+  background-image: linear-gradient(238deg, #daa3f3, #b8ffb0);
+  color: #eee5d6;
+  font-size: 25px;
+  line-height: 130%;
+  text-align: justify;
+  text-indent: 40px;
+  font-weight: bold;
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
 </style>
