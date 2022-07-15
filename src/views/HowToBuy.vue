@@ -9,7 +9,8 @@
       <v-container>
         <v-row class="mt-15">
           <v-col cols="12" md="6" class="px-0">
-            <v-img class="mx-10 photo" height="350" :src="require('../assets/images/photo2.jpeg')"/>
+            <v-img class="mx-5 photo" height="350" position="bottom"
+                   :src="require('../assets/images/product3.png')"/>
           </v-col>
 
           <v-col cols="12" md="6">

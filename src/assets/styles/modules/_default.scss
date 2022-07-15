@@ -4,8 +4,12 @@
 }
 
 .dark--overlay-stories {
-  background-image: linear-gradient(180deg, hsla(0, 0%, 100%, 0) 33%, rgba(19, 19, 19, 0.51) 86%),
-  linear-gradient(180deg, rgba(24, 24, 24, 0.71), hsla(0, 0%, 100%, 0) 57%);
+  background-image: linear-gradient(180deg, hsla(0, 0%, 100%, 0) 33%, rgba(19, 19, 19, 0.44) 86%),
+  linear-gradient(180deg, rgba(24, 24, 24, 0.45), hsla(0, 0%, 100%, 0) 57%);
+}
+.dark--overlay-stories:hover {
+  background-image: linear-gradient(180deg, hsla(0, 0%, 100%, 0) 33%, rgba(255, 255, 255, 0) 86%),
+  linear-gradient(180deg, rgba(24, 24, 24, 0), hsla(0, 0%, 100%, 0) 57%);
 }
 
 .dark--overlay-header {

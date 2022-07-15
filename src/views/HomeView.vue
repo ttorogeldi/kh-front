@@ -21,7 +21,10 @@
             </v-row>
             <v-row>
               <v-col cols="4" class="d-none d-lg-block">
-                <v-img height="550" class="mx-10 photo" :src="require('../assets/images/photo1.jpeg')"/>
+                <v-img
+                    lazy-src="../assets/images/lazy.gif"
+                    height="550" class="mx-10 photo"
+                    :src="require('../assets/images/photo1.jpeg')"/>
               </v-col>
               <v-col cols="10" lg="4" class="mx-auto">
                 <p class="tableparagraph mx-auto">
@@ -36,7 +39,10 @@
                 </p>
               </v-col>
               <v-col cols="4" class="d-none d-lg-block">
-                <v-img class="mx-10 photo" height="550" :src="require('../assets/images/photo2.jpeg')"></v-img>
+                <v-img
+                    class="mx-10 photo"
+                    lazy-src="../assets/images/lazy.gif" height="550"
+                    :src="require('../assets/images/photo2.jpeg')"></v-img>
               </v-col>
             </v-row>
           </v-container>
@@ -46,7 +52,8 @@
             <v-row>
               <v-col cols="10" class="mx-auto">
                 <div class="text-h4 text-lg-h3 font-weight-bold pt-10 pt-md-15 white--text">THE HONEY</div>
-                <p class="paragraff pt-8 mx-auto">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Our journey started in the sainfoin fields of
+                <p class="paragraff pt-8 mx-auto">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Our journey started in the sainfoin
+                  fields of
                   Issyk-Kul near the foothills of Tien-Shan. Instantly recognizable pink hues became the backdrop to
                   what later turned into our brand.<br>&nbsp;&nbsp;&nbsp;&nbsp;With every cradle of flowers we create
                   the best in class product that presents honey in a whole new light. We look to reinvent the category
@@ -68,16 +75,26 @@
         <v-container class="d-none d-md-block pt-15" fluid>
           <v-row>
             <v-col cols="3">
-              <v-img class="photo-blur" :src="require('../assets/images/honye1.jpeg')"></v-img>
+              <v-img class="photo-blur"
+                     lazy-src="../assets/images/lazy.gif" :src="require('../assets/images/honye1.jpeg')"></v-img>
             </v-col>
             <v-col cols="3">
-              <v-img class="photo-blur" :src="require('../assets/images/honey2.jpeg')"></v-img>
+              <v-img
+                  class="photo-blur"
+                  lazy-src="../assets/images/lazy.gif"
+                  :src="require('../assets/images/honey2.jpeg')"></v-img>
             </v-col>
             <v-col cols="3">
-              <v-img class="photo-blur" :src="require('../assets/images/honey3.jpeg')"></v-img>
+              <v-img
+                  class="photo-blur"
+                  lazy-src="../assets/images/lazy.gif"
+                  :src="require('../assets/images/honey3.jpeg')"></v-img>
             </v-col>
             <v-col cols="3">
-              <v-img class="photo-blur" :src="require('../assets/images/honey4.jpeg')"></v-img>
+              <v-img
+                  class="photo-blur"
+                  lazy-src="../assets/images/lazy.gif"
+                  :src="require('../assets/images/honey4.jpeg')"></v-img>
             </v-col>
           </v-row>
         </v-container>
@@ -148,6 +165,7 @@ export default {
 }
 
 .photo:hover {
+
   -webkit-filter: grayscale(0);
   -webkit-transition: -webkit-filter 625ms ease;
   transition: -webkit-filter 625ms ease;
@@ -156,17 +174,18 @@ export default {
 }
 
 .photo-blur {
-  filter: blur(2px);
+  filter: blur(1px);
   margin: 25px;
+  transition: transform .4s;
 
 }
 
 .photo-blur:hover {
+  opacity: 1;
+  transform: scale(1.1);
   filter: blur(0px);
-  margin: 0;
-  transition: -webkit-filter 625ms ease;
-  transition: filter 625ms ease;
-  transition: filter 625ms ease, -webkit-filter 625ms ease;
+  margin: 0;;
+
 }
 
 @media (max-width: 700px) {
